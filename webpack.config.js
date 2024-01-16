@@ -58,6 +58,7 @@ module.exports = {
       minimizer: [
         `...`,
         new CssMinimizerPlugin(),
+        runtimeChunk: 'single'
       ],
     },
     devServer: {
