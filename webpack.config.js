@@ -19,10 +19,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public'),
         scriptType: 'module',
-        publicPath: ''
+        publicPath: '',
     },
     module: {
         rules: [
+            {
+              test: /\.html$/i,
+              loader: "html-loader",
+            },
             {
               test: /\.css$/i,
               use: [
@@ -30,7 +34,6 @@ module.exports = {
                 'css-loader',
                 'postcss-loader',
               ],
-              
             },
             {
               test: /\.(?:js|mjs|cjs)$/,
@@ -58,12 +61,12 @@ module.exports = {
       minimizer: [
         `...`,
         new CssMinimizerPlugin(),
-        runtimeChunk: 'single'
       ],
+      runtimeChunk: 'single'
     },
     devServer: {
       watchFiles: {
-        paths: ['src/assets/index.html']
+        paths: ['src/*', 'src/assets/*.html']
       },
       static: {
         directory: path.join(__dirname, 'public'),
