@@ -5,6 +5,7 @@ module.exports = {
 
     // add browserslist config to package.json (see below)
     "postcss-preset-env": {},
+    "autoprefixer": {},
     "postcss-combine-duplicated-selectors": {},
     "postcss-sort-media-queries": {}
   }
