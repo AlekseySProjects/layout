@@ -1,12 +1,11 @@
 module.exports = {
   plugins: {
-    // include whatever plugins you want
-    // but make sure you install these via yarn or npm!
-
-    // add browserslist config to package.json (see below)
-    "postcss-preset-env": {},
-    "autoprefixer": {},
-    "postcss-combine-duplicated-selectors": {},
-    "postcss-sort-media-queries": {}
+    'postcss-import': {},
+    'postcss-preset-env': {},
+    'postcss-sort-media-queries': {},
+    'postcss-combine-duplicated-selectors': {},
+    '@csstools/postcss-oklab-function': {},
+    '@csstools/postcss-media-minmax': {},
+    'autoprefixer': {}
   }
 }
